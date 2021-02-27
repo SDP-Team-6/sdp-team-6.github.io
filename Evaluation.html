@@ -57,8 +57,10 @@
         <nav class="header-nav-wrap">
             <ul class="header-nav">
                 <li><a href="index.html" title="Home">Home</a></li>
+                <li><a href="System.html" title="System">System</a></li>
                 <li><a href="blogs.html" title="Services">Blogs</a></li>
-                <li class="current"><a href="about.html" title="About">About</a></li>
+                <li class="current"><a href="team.html" title="About">Team</a></li>
+                <li><a href="Comments.html" title="Comments">Comments*</a></li>
                 <li><a href="Testimonials.html" title="Testimonials">Testimonials*</a></li>
                 <li><a href="How-it-works.html" title="How it works">How it works*</a></li>
                 <li><a href="User-Guide.html" title="User Guide">User Guide*</a></li>
@@ -91,19 +93,69 @@
         <div class = "row add-bottom">
             <div class="column large-full">
                 <h3 class = "display-1">Evaluation Tests</h3>
-                <p>Graphs and Tables of the Evaluation tests conducted can be seen here -</p>
+                <p>Certain Evaluation tests we could possibly conduct are -
+                    <ul>
+                        <li>Checking for uneven acceleration on the three different motors - 
+                            An uneven acceleration in the three motors will cause the robot to tilt which 
+                            would mean that the robot won't be able to climb the pole and could possibly
+                            also result in disintegration. 
+                            A possible way to test for unequal acceleration is to use an accelerometer 
+                            for the motors and check to ensure they have equal accelerations.
+                        </li>
+                        <li>We need to regulate the speed of the motors for ideal exposure of the pole 
+                            to the UVC. According to a research conducted by our team member Yasmin Yang 
+                            for ideal exposure of the pole to the UVC LED we would require a 
+                            dosage of 10.6 mJ/cm<sup>2</sup> according to the source
+                            <a href="https://www.researchgate.net/publication/341371696_Ultraviolet_irradiation_doses_for_coronavirus_inactivation_-review_and_analysis_of_coronavirus_photoinactivation_studies_Ultraviolette_Bestrahlungsdosen_fur_die_Inaktivierung_von_Coronaviren_-Review_u#fullTextFileContent", style="color:#FF0000;">
+                            UV-study</a> in addition to which we would have an irradiance of
+                            1.17 mW/cm<sup>2</sup>, therefore, we calculated exposure time as 
+                            <var>Exposure</var> = <var>Dosage</var> / <var>Irradiance</var> which on 
+                            calculation is equivalent to 9 seconds. The ideal speed of the motor was then 
+                            calculated to be 0.22 rad/s. Therefore, in order to achieve ideal exposure we 
+                            will have to ensure that each motor moves at a constant speed of 0.22 rad/s. 
+                            We would probably do so using a speedometer.
+                        </li>
+                        <li>Additionally, we can try a variety of heights of the pole to test on, just to make sure 
+                            that we achieve a successful implementation for a wide range of heights and the robot 
+                            does not experience any issues climbing large distances.
+                        </li>
+                        <li>A useful evaluation test would be to add noise to the sensors in a webots simulation.
+                        </li>
+                        <li>It would also be a good idea to test the webots simulation with different values of friction
+                            between the wheels and the pole that the robot will climb. 
+                        </li>
+                        <li>As far as webots simulations are concerned, it would also be a good idea to test our robot for different
+                            speeds of our motor apart from 0.22 rad/s.
+                        </li>
+                        <li>Another evaluation test that could possibly be useful is observing and ensuring that there is 
+                            minimal wear and tear of the robot wheels and motors after repeated use so that we don't end 
+                            up changing the friction between the pole and the wheels.
+                        </li>
+
+                    </ul>
+
+                </p>
             </div>
         </div>
         <div class = "row add-bottom">
             <div class="column large-full">
             <h4 class = "display-1">User Tests</h4>
-            <p>Resuts for user testing can be seen here -</p>
+            <p>Resuts for user testing can be seen here - 
+            Since we haven't conducted any user tests, we will be updating this section later on.
+            </p>
             </div>
         </div>
         <div class = "row add-bottom">
             <div class="column large-full">
             <h3 class = "display-1">Main Areas of Improvement</h3>
-            <p>What all we learnt from conducting various tests and how we plan to improve -</p>
+            <p>
+            The main problem we are experiencing right now is due to unequal acceleration between the motors
+            due to which PAUL is not able to climb the pole ideally. 
+            Once the hardware team is able to access the robot, they should be able to work out the cause 
+            for this by measuring the accelerations of all the three motors and working out the reason for 
+            unequal accelerations. 
+            Therefore, the main area of improvement right now would be to simply correct the unequal accelerations.
+            </p>
             </div>
         </div>
 
