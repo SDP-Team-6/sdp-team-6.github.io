@@ -111,21 +111,18 @@
                             1.17 mW/cm<sup>2</sup>, therefore, we calculated exposure time as 
                             <var>Exposure</var> = <var>Dosage</var> / <var>Irradiance</var> which on 
                             calculation is equivalent to 9 seconds. The ideal speed of the motor was then 
-                            calculated to be 0.22 rad/s. Therefore, in order to achieve ideal exposure we 
-                            will have to ensure that each motor moves at a constant speed of 0.22 rad/s. 
+                            calculated to be 0.22<var>d</var> rad/s, where <var>d</var> is the fraction of the height of UV box with respect to the diameter of the wheel. 
+                            Therefore, in order to achieve ideal exposure we 
+                            will have to ensure that each motor moves at a constant speed of 0.22d rad/s. 
                             We would probably do so using a speedometer.
                         </li>
                         <li>Additionally, we can try a variety of heights of the pole to test on, just to make sure 
                             that we achieve a successful implementation for a wide range of heights and the robot 
                             does not experience any issues climbing large distances.
                         </li>
-                        <li>A useful evaluation test would be to add noise to the sensors in a webots simulation.
+                        <li>An interesting evaluation test could be to vibrate the pole as PAUL climbs to test its endurance.
                         </li>
-                        <li>It would also be a good idea to test the webots simulation with different values of friction
-                            between the wheels and the pole that the robot will climb. 
-                        </li>
-                        <li>As far as webots simulations are concerned, it would also be a good idea to test our robot for different
-                            speeds of our motor apart from 0.22 rad/s.
+                        <li>It would be a good idea to test our robot for different speeds of our motors.
                         </li>
                         <li>Another evaluation test that could possibly be useful is observing and ensuring that there is 
                             minimal wear and tear of the robot wheels and motors after repeated use so that we don't end 
@@ -140,8 +137,13 @@
         <div class = "row add-bottom">
             <div class="column large-full">
             <h4 class = "display-1">User Tests</h4>
-            <p>Resuts for user testing can be seen here - 
-            Since we haven't conducted any user tests, we will be updating this section later on.
+            <p>As far as user tests are concerned, we will be testing the functionality of the user app
+                and providing the users a survey where the user can give us insights into - 
+                <ul>
+                <li> How effective PAUL is at climbing the pole and coming down.</li> 
+                <li> The response time of the robot - the delay between the user giving the command to climb and PAUL climbing the pole.</li>
+                <li> The quality of the user app - How user friendly it is , how often it crashes etc. </li> 
+                </ul>
             </p>
             </div>
         </div>
