@@ -5,7 +5,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>How it works</title>
+    <title>PAUL - How it works</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -78,7 +78,7 @@
         <div class="gradient-overlay"></div>
         <div class="row page-header__content">
             <div class="column">
-                <h1>How it works</h1>
+                <h1>How PAUL works</h1>
             </div>
         </div>
 
@@ -88,6 +88,70 @@
     <!-- page content
     ================================================== -->
     <section class="page-content">
+        <div class="row add-bottom">
+
+            <div class="column large-full">
+
+                    <p>
+                        <strong>PAUL</strong> is the only one which will be able to disinfect trains via a band of low wavelength ultraviolet radiation (UVC)  during the operation and transit on trains, unlike other UVC cleaners on the market. The robot will move up and down the pole disinfecting using an enclosed UVC emitter. 
+                    </p>
+                    <p> Initially,  we  look  to  simulate  a  simple  robot  that  is  able  to  navigate  poles.   
+                        Eventually,  the  simulation will develop to be robust under vibrations in order to allow for operation during train journeys.  A hardware model will be developed however we expect it to be slightly behind the progress seen in the simulation.  
+                        A web-based UI will be used to control the robot which will allow the user to activate the cleaning process of therobot.
+                          
+                    </p>
+                    
+                <h3 class = "display-1">Software Simulation</h3>
+                    <p>
+                        We use We-bots to achieve a simple simulation of the robot. 
+                    </p>
+                    <p>
+                        To simulate simple robot case, we implemented using a group object so that compound shapes can be defined and allowing easier implementation of physics. 
+                        This layout can be seen in Figure 1.
+                        <br>
+                        <center>
+                            <img src="images/howItWorks/PAUL_Parts.png" alt="Layout of the Webots Simulation Implementation Parts." width="600" height="700">
+                            <figcaption>Figure 1. Layout of the Webots Simulation Implementation Parts.</figcaption>
+                        </center> 
+                    </p>
+                    <p>
+                        Two distance sensors were added using Shape objects and the Distance Sensor class, one on the top and one on the bottom to detect collisions. 
+                        The positioning of these sensors can be seen in Figure 2.
+                        <br>
+                        <center>
+                            <img src="images/howItWorks/PAUL_Sensors.png" alt="Layout of the Webots Simulation Implementation Dis-tance Sensors." width="600" height="700">
+                            <figcaption>Figure 2. Layout of the Webots Simulation Implementation Dis-tance Sensors.</figcaption>
+                        </center> 
+                    </p>
+                    <p>   
+                        To make sure the simulated robot moves smoothly at a designated and constant speed up/down the pole, we tested this by measuring the amount of time that the robot took to ascend/descend the pole with different speed parameters
+                        <br>
+                        <center>
+                            <img src="images/howItWorks/third.gif" alt="Webots Simulation of the robot moving up and down the pole." width="600" height="700">
+                            <figcaption>Figure 3. Webots Simulation of the robot moving up and down the pole.</figcaption>
+                        </center> 
+                    </p>
+
+                <h3 class = "display-1">Hardware</h3>
+                    <p>
+                        For our first prototype, we aim to offload the robots’ weight as much as it is possible, having a case with motors and wheels connected to the power supply with long cables, hence, avoiding unnecessary weight, focusing on lifting through a vertical pole a lightweight chassis.
+                    </p>    
+
+                    <p>
+                        The starting robot would be constructed from a LEGO case, allowing for an easier re-configuration should any changes be necessary for the future (such as adding thin plastic plates pegged directly to the LEGO or a 3D printed casing). For the motors the LEGO NXT will be used, having a rotation speed of 177rpm and a 16.7 N/cm (1.7 kg/cm) torque, should work fine with lifting the lightweight casing. Using a set of 8 AA batteries, with a capacity of 2700mAH each, should be sufficient for the first task.
+                        Figure 4 demonstrates how we intend to set up the hardware of the robot. With the pole shown in the middle and the triangular robot case being used to hold the three wheels onto the pole. 
+                        <center>
+                            <img src="images/howItWorks/hardware-diagram.png" alt="A sketch of the layout of the robot case and wheels." width="300" height="400">
+                            <figcaption>Figure 4. A sketch of the layout of the robot case and wheels.</figcaption>
+                        </center>
+                        <center>
+                            <img src="images/howItWorks/2dplans.png" alt= "2D Plans for the Hardware Implementation." width="600" height="700"">
+                            <figcaption> Figure 5. 2D Plans for the Hardware Implementation.</figcaption>
+                        </center>  
+                    </p>
+                    <p>If the lightweight robot performs as expected, we would move to a more sophisticated configuration. Adding an accelerometer to get readings on the speed, range sensor to know when the robot has finished cleaning the whole pole and gyroscope to be aware of the orientation of the wheels, among others.</p>
+            </div>
+        </div>
 
     </section> <!-- end page content -->
 
