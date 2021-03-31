@@ -38,13 +38,13 @@
 
     <!-- preloader
     ================================================== -->
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div id="loader" class="dots-jump">
             <div></div>
             <div></div>
             <div></div>
         </div>
-    </div>
+    </div> -->
 
 
     <!-- header
@@ -60,12 +60,12 @@
         <nav class="header-nav-wrap">
             <ul class="header-nav">
                 <li><a href="index.html" title="Home">Home</a></li>
-                <li><a href="system.html" title="System">System</a></li>
-                <li><a href="how-it-works.html" title="How it works">How it works*</a></li>
+                <li class="current"><a href="system.html" title="System">System</a></li>
+                <li><a href="how-it-works.html" title="How it works">How it works</a></li>
                 <li><a href="evaluation.html" title="Evaluation">Evaluation</a></li>
                 <li><a href="budget.html" title="Services">Budget</a></li>
                 <li><a href="comments.html" title="Comments">Comments</a></li>
-                <li class="current"><a href="team.html" title="About">Team</a></li>
+                <li><a href="team.html" title="About">Team</a></li>
                 <li><a href="blogs.html" title="Services">Blogs</a></li>
             </ul>
         </nav>
@@ -98,40 +98,81 @@
 
                 <h3 class = "display-1">Concept</h3>
                     <p>
-                        As a result of the COVID-19 pandemic, it is absolutely vital to sanitise and disinfect public surfaces.
-
-                        One of the most popular fomites is the poles people used to hold on to on public transport.
-                        <strong>PAUL</strong> is built to conveniently sanitise poles of public transport by moving vertically and disinfecting them with UV Light.
+                        <strong>PAUL</strong> (Pole Automaton Using Ultraviolet Light) is a pole climbing robot designed to disinfect poles in public transport via a band of low wavelength ultraviolet radiation (UVC).
+                        <br>
+                        PAUL offers support for professional cleaners and workers on public transport during the on-going pandemic, thus having service providers in the public transportation sector as its target market.
+                        <br><br>
+                        <strong style="font-size:18pt;">Use Cases</strong><br>
+                        <strong>1. Disinfection against COVID-19</strong><br>
+                        PAUL is designed primarily for sanitising poles on public transport. The aim is to achieve frequent disinfection as poles are highly touched surfaces.
+                        The robot grips onto a single pole with its wheels. The UI controls its upward and downward movements, as well as the emission of UV light.
+                        During cleaning, the robot moves at a slow, constant speed, and the attached UV module containing UV-C LEDs emit short wavelength ultraviolet light for virus deactivation.
+                        <br><br>
+                        <strong>2. General Purpose Pole Climber (potential use case after the pandemic)</strong><br>
+                        When the UV module is removed, PAUL becomes an automated pole-climber. After the pandemic is over, other modules can replace the UV module to achieve other functionality. (see Future Development section below)
                     </p>
 
 
-                <h3 class = "display-1">Why PAUL?</h3>
+                <h3 class = "display-1">Functionality</h3>
+                <strong style="font-size:22pt;">Features</strong><br>
                     <p>
                         <strong>1. Automatic Moving and Disinfecting</strong>
                         <br>
-                        After PAUL is activated through the app's command, it can move up and down automatically, and the UV emitter will be turned on to disinfect the pole.
+                        The switch of the UV and motors is controlled by the app. After PAUL is activated by the app, it can move up and down automatically. There are distance sensors installed on PAUL. If one of them detects an obstacle, then PAUL will turn around.
+
                         <br><br>
-                        <strong>2. Safety</strong>
+                        <strong>2. Authentication</strong>
+                        <br>
+                        Only the authenticated user can login and control PAUL.
+                        <br><br>
+                        <img src="images/login.png" alt="Porter’s Five Forces Analysis" width="800" height="800"><br>
+                        <strong>3. Multiple Settings</strong>
+                        <br>
+                        The app contains accessibility. The user can toggle on/off High Contrast, Narrator, Magnifier, Light Mode and Vibrations.
+                        For the setting of PAUL, the user can toggle on/off UV mode, Auto mode, and set work hours as well speed of PAUL.
+                        <br><br>
+                        <img src="images/setting.png" alt="Porter’s Five Forces Analysis" width="800" height="800"><br>
+                        <strong>4. Set multiple PAUL in one time</strong>
+                        <br>
+                        If there are multiple PAUL connecting to the app. The user can select one or more of them to set their work.
+                        <br><br>
+                        <img src="images/control.png" alt="Porter’s Five Forces Analysis" width="800" height="800"><br>
+
+                        <br>
+                        <strong style="font-size:22pt;">Why PAUL?</strong><br>
+                        <strong>1. Efficient Disinfection</strong>
+                        <br>
+                        Compared to whole-room UV disinfection, PAUL is more specialised, which easily allows more frequent cleaning of the highly touched poles.
+                        This significantly improves the outcome of disinfection by specifically targeting one common way of virus transmission, while disinfecting at a higher rate.
+                        <br><br>
+                        <strong>2. Effective Design</strong>
+                        <br>
+                        The design of PAUL overcomes traditional problems with UV cleaning. It limits the cleaning area, emits light at a close distance,
+                        and maintains a constant light intensity –– all allowing stable and highly focused UV irradiation towards the pole.
+                        <br><br>
+                        <strong>3. Safety</strong>
                         <br>
                         Our primary competitor in the market would be UVD Robots, who themselves produce large robots which use UVC technology to clean entire rooms at a time.
                         However, our competitor is only able to deploy their robots when no humans are present due to
                         <a href = "https://www.cancer.org/cancer/cancer-causes/radiation-exposure/uv-radiation.html"> <U>the damaging nature of UVC radiation.</U> </a>
                         In this case, PAUL encloses the UV emitter by a safety case.
                         <br><br>
-                        <strong>3. Easy to Use</strong>
+                        <strong>4. Easy to Use</strong>
                         <br>
                         Users can control PAUL easily by a simple app. It connects PAUL via wifi with the help of a Raspberry Pi.
                         <br><br>
-                        <strong>4. Cheaper</strong>
+                        <strong>5. Cheaper</strong>
                         <br>
-                        PAUL is much cheaper than other UV disinfecting robots in market. (Specific information can be implemented after market research)
+                        In using an LED strip and cleaning a small surface area at a time, PAUL is much cheaper than other disinfection robots that use big UV lamps.
                     </p>
-
                 <div class="video-container">
-                        <iframe width="400" height="315" src="https://www.youtube.com/embed/eq0lL1ioMA8?controls=0" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <video width="320" height="240" controls="controls">
+                  <source src="video/group-6-demo4-video.mp4" type="video/mp4" />
+                  <object data="video/group-6-demo4-video.mp4" width="320" height="240">
+                    <embed src="video/group-6-demo4-video.mp4.swf" width="320" height="240" />
+                  </object>
+                </video>
                 </div>
-
                 <h3 class = "display-1">Market Research</h3>
                     <p class = "market_research">
                         <strong style="font-size:18pt;">Background</strong><br>
@@ -211,9 +252,9 @@
                             <li>It is concerned that <b>metallic poles can reflect UV light</b> and may potentially make harm to people if the UV module is not properly sealed to eliminate human exposure during operation.
                               According to this <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7571309/" title="A Critical Review on Ultraviolet Disinfection Systems against COVID-19 Outbreak">critical review</a>,
                               “PTFE, aluminum, and stainless-steel surfaces can reflect up to 95%, 90%, and 50% of UVC radiation, respectively.”</li>
-                            <br><b>Implementation & Distribution</b>
+                            <br><b>Implementation</b>
                             <li>A list of <b>UV LED suppliers</b> are found in the <a href="https://uvsolutionsmag.com/buyersguide/services/0_LED__UVLampSupplier" title="IUVA LED Suppliers">IUVA buyers guide.</a></li>
-                            <li>(<a href="https://pubmed.ncbi.nlm.nih.gov/26362699/" title="Miller et al., 2015">Miller et al., 2015</a>) suggested that UV cleaning solutions are best when working alongside professional cleaners, substantially increasing their effectiveness.</li> 
+                            <li>(<a href="https://pubmed.ncbi.nlm.nih.gov/26362699/" title="Miller et al., 2015">Miller et al., 2015</a>) suggested that UV cleaning solutions are best when working alongside professional cleaners, substantially increasing their effectiveness.</li>
                         </ul><br>
                         <strong style="font-size:18pt;">Next Steps</strong>
                         <br>
@@ -230,14 +271,14 @@
 
                 <h3 class = "display-1">Future Development</h3>
                     <p style="margin-bottom:0;">
-                        <strong>Remould after pandemic</strong>
+                        <strong>1. Remould after pandemic</strong>
                         <br>
-                        After pandemic finish, PAUL can be remoulded for other use cases.
-                        For example, it can be equipped with a camera and used to inspect street poles for damage.
-                        This will allow workers to inspect poles from the safety of the group and only have to work high-up when damage is detected by the robot.
-                        This will allow street poles to be inspected quicker and more frequently as workers can easily deploy the robot up the pole.
+                        After the pandemic is over, PAUL can be remoulded for other use cases by simply replacing the UV module with other modules.
+                        For example, it can be equipped with a camera system to inspect street poles for damage (such as power cables on top of the pole).
+                        This will allow workers to inspect poles safely and only have to work high-up when damage is detected by the robot.
+                        Hence, poles can be inspected quicker and more frequently as workers can easily deploy the robot up the pole.
                         <br><br>
-                        <strong>Safety Features for Operation in Transit</strong>
+                        <strong>2. Safety Features for Operation in Transit</strong>
                         <br>
                         To operate PAUL when the bus/train is in transit with passengers close to the UV module, more rigorous safety features should be added to reduce the chance of human exposure.
                         <ul style="margin-top:0;">
