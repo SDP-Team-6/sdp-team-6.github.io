@@ -186,10 +186,9 @@
                             <li><b>Tests conducted without noise</b> - The following settings were used as default on webots - Pole Height - 2m, Up/Down wheel speed - 0.3 rad/s, Distance sensor thresholds of 1000mm.
                                 The UV light was engaged by default.
                             <br><br>
-                            <img src="images/evaluation/webots_distance_sensor_tests.png", height="60%",width="60%",alt="Distance sensor tests without noise", class="center">
+                            <img src="images/evaluation/webots_corrected_dist_sensor_tests.png", height="60%",width="60%",alt="Distance sensor tests without noise", class="center">
                             <br><br>
-                            <b>Conclusion</b> - The size of the modules above the distance sensors hadn't been adequately measured, potentially causing collisions in addition, there was no defense mechanism in place preventing startup 
-                               if both distance sensors reported values within their threshold at initialisation. We corrected both of these with a patch to the controller.
+                            <b>Conclusion</b> - We passed all the tests upon adding a patch to the controller.
                             <br> In addition to this, we conducted extended tests - 
                             <br><br>
                             <img src="images/evaluation/webots_extended_operation_test.png", height="40%", width="40%",alt="Extended testing", class="center">
