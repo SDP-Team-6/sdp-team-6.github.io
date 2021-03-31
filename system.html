@@ -99,7 +99,7 @@
                 <h3 class = "display-1">Concept</h3>
                     <p>
                         As a result of the COVID-19 pandemic, it is absolutely vital to sanitise and disinfect public surfaces.
-                        
+
                         One of the most popular fomites is the poles people used to hold on to on public transport.
                         <strong>PAUL</strong> is built to conveniently sanitise poles of public transport by moving vertically and disinfecting them with UV Light.
                     </p>
@@ -189,6 +189,7 @@
                             <li>We have identified some potential competitors. At present, however, most UV disinfection robots are for whole-room treatment, such as the <a href="https://www.hipac.com.au/shop/uvc-disinfection-robot/index" title="Hipac"> Hipac disinfection robot </a>,
                               <a href="https://www.uvd-robots.com/" title="UVD">UVD robots</a>, and <a href="https://www.dailymail.co.uk/sciencetech/article-8159921/Chinese-company-unveils-40-000-hospital-robot-disinfectants-against-coronavirus-pathogens.html" title="Daily Mail"> the one developed by Keenon Robotics</a>.
                               These large robots, as well as small hand-held UV disinfection devices such as the <a href="https://www.pro-lab.co.uk/product/bio%e2%80%a2wand-uv-sanitiser/" title="Bio Wand">Bio-Wand sanitiser</a>, aim for <b>different purposes from PAUL</b>.</li>
+                            <li>While the larger UV disinfection robots mentioned above cost around <b>£40,000</b>, PAUL is competitive not only for that it's the only robot on the market which will provide its functionality, but also for a much cheaper price.</li>
                             <br><b>UV Disinfection</b>
                             <li>Current studies generally acknowledges the success of UV on reducing surface contamination.
                               Particularly, <b>SARS-CoV-2 (Covid-19) is highly susceptible to irradiation with ultraviolet light</b>
@@ -212,7 +213,7 @@
                               “PTFE, aluminum, and stainless-steel surfaces can reflect up to 95%, 90%, and 50% of UVC radiation, respectively.”</li>
                             <br><b>Implementation & Distribution</b>
                             <li>A list of <b>UV LED suppliers</b> are found in the <a href="https://uvsolutionsmag.com/buyersguide/services/0_LED__UVLampSupplier" title="IUVA LED Suppliers">IUVA buyers guide.</a></li>
-                            <li>(<a href="https://pubmed.ncbi.nlm.nih.gov/26362699/" title="Miller et al., 2015">Miller et al., 2015</a>) concluded that UV cleaning solutions are best when working alongside professional cleaners.</li>
+                            <li>(<a href="https://pubmed.ncbi.nlm.nih.gov/26362699/" title="Miller et al., 2015">Miller et al., 2015</a>) suggested that UV cleaning solutions are best when working alongside professional cleaners, substantially increasing their effectiveness.</li>
                             <li>Using Glassdoor, scotrail.co.uk and abellio.com we researched who would be responsible for discussions surrounding implementing these robots on trains, the experience they would need and how they conducted their jobs.</li>
                                 <!-- who? how?-->
                         </ul><br>
@@ -220,25 +221,33 @@
                         <br>
                         <ul>
                           <li>We are in a good position for horizontal scaling, having already prepared authentication scripts and a web UI which supports accounts with many robots.</li>
-                          <li>It is possible for expansion by considering implementing it during transit improving commercial viability but including many ethical and design constraints.</li>
-                          <li>It would be prudent for us to reach out to procurement officers and develop a good working relationship before our robot is entirely completed.</li>
-                          <li>We should also now begin to work on identifying alternative suppliers to minimise our dependency on individual suppliers and improve our prices through limiting their bargaining power.</li>
+                          <li>Currently, each pole will employ their own PAUL to achieve disinfection. For now, PAUL will only operate when there are no humans in the area, at the end of a given route.
+                            In future we leave open the possibility of expanding PAUL’s functionality to allow for operation during transit, improving commercial viability but including many ethical and design constraints.</li>
+                          <li>Start to develop relationships with procurement officers at train companies operating in Scotland e.g. Scotrail, Crosscoun-try, etc.</li>
+                          <li>Start negotiating with suppliers in order to minimise our dependency on any given supplier and improve our negotiating position when buying in bulk whilst minimising production downtime.</li>
                         </ul>
                         <br><br>
 
                     </p>
 
                 <h3 class = "display-1">Future Development</h3>
-                    <p>
+                    <p style="margin-bottom:0;">
                         <strong>Remould after pandemic</strong>
                         <br>
-
                         After pandemic finish, PAUL can be remoulded for other use cases.
-
                         For example, it can be equipped with a camera and used to inspect street poles for damage.
                         This will allow workers to inspect poles from the safety of the group and only have to work high-up when damage is detected by the robot.
                         This will allow street poles to be inspected quicker and more frequently as workers can easily deploy the robot up the pole.
                         <br><br>
+                        <strong>Safety Features for Operation in Transit</strong>
+                        <br>
+                        To operate PAUL when the bus/train is in transit with passengers close to the UV module, more rigorous safety features should be added to reduce the chance of human exposure.
+                        <ul style="margin-top:0;">
+                          <li>Motion sensors can be used to detect if anything is moving towards or around it, and allow it to carry out corresponding actions – produce alarms and turn off the UV lights
+                            – to ensure that any attempt to touch the robot body will not result in exposure to UV.</li>
+                          <li>Proximity sensors can be used to give warnings when it finds anything within a set distance.</li>
+                          <li>Locks on wheels for PAUL to grip tightly onto the pole whenever it is stopped can protect it against some unexpected disturbance caused by passengers, especially children.</li></ul>
+                        <br>
                     </p>
             </div>
         </div>
