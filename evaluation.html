@@ -47,10 +47,10 @@
             <ul class="header-nav">
                 <li><a href="index.html" title="Home">Home</a></li>
                 <li><a href="system.html" title="System">System</a></li>
-                <li><a href="how-it-works.html" title="How it works">How it works*</a></li>
+                <li><a href="paul-works.html" title="How it works">How it works*</a></li>
                 <li><a href="evaluation.html" title="Evaluation">Evaluation</a></li>
                 <li><a href="budget.html" title="Services">Budget</a></li>
-                <li><a href="comments.html" title="Comments">Comments</a></li>
+                <!--<li><a href="comments.html" title="Comments">Comments</a></li> -->
                 <li class="current"><a href="team.html" title="About">Team</a></li>
                 <li><a href="blogs.html" title="Services">Blogs</a></li>
             </ul>
@@ -95,7 +95,9 @@
                             <b> Conclusion </b> - PAUL was only able to climb the pole with motor power of more than 60% as its wheels appeared to not have enough power to lift PAUL up the pole. At 100%, the motors appeared to cause the drive shafts of the motors to become detached which compromised the integrity of PAUL and caused it to fall back down the pole. PAUL was able to climb the pole at 70% without slipping back down the pole
                             <br> <b>NOTE</b> - The motors used a percentage value to control the speed of the motors, within the range <b>[-100,100]</b>, positive represents climbing and negative represents descending.
                             <br><br>
+                            <center>
                                 <img height="40%", width="40%", class="center" src="images/evaluation//hardware_motor_test_runs.png", alt="Initial motor test runs">
+                            </center>
                             <br><br>
                         </li>
                         <li><b>Hardware Sensor Tests</b> - Before attaching the sensors on to the Hardware Prototype casing, we tested if they were functioning properly. To check the IR sensors we took readings from the IR sensors when close (4cm) and far away (21.5cm) from a target. The values 4cm and 21cm were chosen as these were the minimum and maximum ranges of our sensors, so produced the highest and lowest outputs respectively.  We tested the bumper sensors by having the technicians manually trigger each bumper sensor to check that they were working as expected.
@@ -110,7 +112,9 @@
                             <b>NOTE</b> -<b> BS = Bumper Sensors </b>
                             <br> <b>NOTE</b> - On test 4 the tape holding down one of the bumper sensors during the test fell off and caused it to not be triggered.  In test 5 we repeated test 4 with the tape attached properly.
                             <br><br>
+                            <center>
                                 <img src="images/evaluation/hardware_sensor_tests.png", alt="Hardware senor tests", height="40%", width="40%", class="center">
+                            </center>
                             <br><br>
                         </li>
                         <li><b>UV-Cleaning System Test</b> - We conducted test runs on our Hardware prototype with the UV cleaning module installed.
@@ -120,7 +124,9 @@
                                <br>
                                <b>Conclusion</b> - At 80,90,100% we faced the same problem with our motors causing the drive shafts of the motors to become detached which compromised the integrity of PAUL and caused it to fall back down the pole. 
                                <br><br>
+                            <center>
                                <img src="images/evaluation/uv_cleaning_module_tests.png", alt="UV module cleaning tests demo-3", height="40%", width="40%", class="center">
+                            </center>
                                <br><br>
                         </li>
                         <li><b>LED Light Test</b> - The purpose of this test was to ensure that the LED light functioned properly. To actvate the LED light, we ran a python script with root priveleges 
@@ -131,7 +137,9 @@
                             Tests 3 and 4 were successful in activating the LED using the library but the colour was not similar enough to look like UV hence the tests were considered unsuccessful on that basis.
                             Tests 5 and 6 were successful as we were able to activate the LED and have the colour look similar enough to UV light.
                             <br><br>
+                            <center>
                                 <img src="images/evaluation/led_light_tests.png", alt="LED light test", height="30%", width="30%", class="center"> 
+                            </center>
                             <br><br>
                         </li>
                         <li><b>UV-Cleaning Module Test</b> - These tests were conducted at 70% motor power. The objective was to check that PAUL could climb the pole succesfully and perform its UV cleaning function as planned. 
@@ -139,7 +147,9 @@
                                 The integrity of the UV-casing was also taken into account.</b>
                             <br><b>Conclusion</b> - The last successful test was conducted on 16/03/2021 which was conducted before installing components into the consumer box. After installing the components into the consumer box, we faced a range of issues.
                             <br><br>
-                            <img src="images/evaluation/uv_cleaning_module_tests_demo4.png", alt="UV Cleaning Module tests", height="40%", width="40%",class="center">
+                            <center>
+                                <img src="images/evaluation/uv_cleaning_module_tests_demo4.png", alt="UV Cleaning Module tests", height="40%", width="40%",class="center">
+                            </center>
                             <br><br>
                             <ul>
                                 <li><b>ISSUE - 16/03/2021</b> - In tests 1 and 2, the pins on the Python LED library didn't match the pins on the Raspberry Pi.
@@ -166,10 +176,12 @@
                     <br>
                     <br>
                     <ul>
-                        <li><b>Velocity Testing</b> - The pole was simulated to be 2m high with a radius of 0.03m. Each test was conducted 5 times and each test number is an average of the 5 tests,
-                               a total of 25 tests were conducted of different speeds.
+                        <li><b>Velocity Testing</b> - We started this test with a 2m high pole, having a radius of 0.03m. PAUL was rigorously tested 5 times for each of the 5 values of velocity and passed each and every one of the 25 tests.
+                            <br><b>NOTE</b> - Each value under the column "Time Taken" is the average of the 5 tests for each value of velocity, it is the time taken to climb the pole from the bottom and descend from the top to the same spot from where it started. 
                             <br><br>
+                        <center>
                             <img src="images/evaluation/webots_velocity_tests.png", height="40%", width="40%",alt="Velocity tests",class="center">
+                        </center>
                             <br> We were satisfied with these tests since we intended to use UVC with the robot, therefore, there was no need to make it move fast.
                             <br><br>
                         </li>
@@ -178,7 +190,9 @@
                             <br><b>Success Criteria - Reaching the top of the pole after starting from the bottom.</b>
                             <b>Conclusion</b> - It was noticed that around 10m, the robot would slip and fall down the pole.
                             <br><br>
+                        <center>
                             <img src="images/evaluation/webots_height_testing.png", height="25%", width="25%", alt="Height tests", class="center">
+                        </center>
                             <br><br>
                         </li>
                         <li><b>Distance Sensor Tests</b>
@@ -186,12 +200,16 @@
                             <li><b>Tests conducted without noise</b> - The following settings were used as default on webots - Pole Height - 2m, Up/Down wheel speed - 0.3 rad/s, Distance sensor thresholds of 1000mm.
                                 The UV light was engaged by default.
                             <br><br>
+                        <center>
                             <img src="images/evaluation/webots_corrected_dist_sensor_tests.png", height="60%",width="60%",alt="Distance sensor tests without noise", class="center">
+                        </center>
                             <br><br>
                             <b>Conclusion</b> - We passed all the tests upon adding a patch to the controller.
                             <br> In addition to this, we conducted extended tests - 
                             <br><br>
+                        <center>
                             <img src="images/evaluation/webots_extended_operation_test.png", height="40%", width="40%",alt="Extended testing", class="center">
+                        </center>
                             <br><br>
                             The results showed that PAUL ran remarkably well at and beyond our expected operation speeds.
                             We again implemented a small patch allowing for the simulation to halt for a set period between cleaning cycles to minimise downtime.
@@ -206,11 +224,15 @@
                                 values above 500. 100mm was an estimate of how high we expected may be necessary to accommodate for clearance of PAUL and curvature of surfaces near the 
                                 top of the pole.
                                 <br><br>
+                            <center>
                                 <img src="images/evaluation/webots_distance_sensor_noise_test.png", height="40%", width="40%", alt="Distance sensor tests with noise", class="center">
+                            </center>
                                 <br>
                                 <br><b>Success Criteria - Being able to perform 5 tours of the pole succesfully cleaning all areas of the pole outside the 100mm clearance at the top and bottom.</b> 
                                 <br><br>
+                            <center>
                                 <img src="images/evaluation/webots_qa_testing.png", height="50%", width="50%",alt="Example of value ranges at 100mm and 500mm", class="center">
+                            </center>
                                 <br><br>
                                 All distance sensors work by emitting rays and performing calculations based on them, therefore, we varied the number of rays,weights on the values returned by the rays and 
                                 the arrangement of those rays.
@@ -222,7 +244,9 @@
                     <li><b>Friction Tests</b> - All of the friction tests compared a surface type (for the pole) against rubber. The rubber we used for values provided was Rubber A 60, with the exception of test 7, for which we used ice-friction. 
                         <b>Success Criteria - We considered a pass to be succesfully climbing and descending the pole 5 times.</b>
                         <br><br>
+                    <center>
                         <img src="images/evaluation/webots_friction_tests.png", height="40%", width="40%", alt="Friction tests", class="center">
+                    </center>
                         <br><br>
                         Tests 1-5 ultimately succeeded without any notable deviation from our expectations. Test 6 however, experienced a slight spin as it climbed, however it was still possible for the entire climb/descent to be completed five times without seriously impacting the time taken. We tested some values between 0.56 and 0.15
                         and found as we decreased friction, the spin increased until PAUL couldn't climb the poll at all , as was the case in test 7.
@@ -237,27 +261,11 @@
         
         <div class = "row add-bottom">
             <div class="column large-full">
-            <h4 class = "display-1">User Tests</h4>
-            <p>As far as user tests are concerned, we will be testing the functionality of the user app
-                and providing the users a survey where the user can give us insights into - 
-                <ul>
-                <li> How effective PAUL is at climbing the pole and coming down.</li> 
-                <li> The response time of the robot - the delay between the user giving the command to climb and PAUL climbing the pole.</li>
-                <li> The quality of the user app - How user friendly it is , how often it crashes etc. </li> 
-                </ul>
-            </p>
-            </div>
-        </div>
-        <div class = "row add-bottom">
-            <div class="column large-full">
-            <h3 class = "display-1">Main Areas of Improvement</h3>
+            <h3 class = "display-1">Going Forward</h3>
             <p>
-            The main problem we are experiencing right now is due to unequal acceleration between the motors
-            due to which PAUL is not able to climb the pole ideally. 
-            Once the hardware team is able to access the robot, they should be able to work out the cause 
-            for this by measuring the accelerations of all the three motors and working out the reason for 
-            unequal accelerations. 
-            Therefore, the main area of improvement right now would be to simply correct the unequal accelerations.
+            The main problem we are experiencing right now is the fact that the hardware prototype of PAUL isn't able to properly climb or descend the pole, we are working 
+            hard towards bringing our hardware prototype up to the standards of our Simulation despite the hardships of the pandemic.
+            
             </p>
             </div>
         </div>
