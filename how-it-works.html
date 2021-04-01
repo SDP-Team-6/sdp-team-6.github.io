@@ -139,41 +139,36 @@
                         We hoped to be able to present a fully working hardware version of PAUL at the industry day however we ran into some hardware issues close to the end of development. In the video below we will take you through the work we have put into PAUL and the hardware issues we faced.
                         *Video*
 
-                          <b>Layout</b>
+                        <br><b>Layout</b><br>
                         The Hardware system consists of 3 main parts; the consumer’s box (1), the wire arm (2) and the pole climber’s casing (3).
-                        *Layout Diagram*
                          <center>
-                          <figcaption>Flowchart for the Controller of our Webots Simulation</figcaption>
+                          <figcaption>Hardware System Layout</figcaption>
                           <img src="images/howItWorks/hardware_layout.jpg" alt="Flowchart for Controller of our Webots Simulation">
-                        </center>
+                        </center><br>
 
-                          <b>Pole Climber</b>
+                        <br><b>Pole Climber</b><br>
                         The Hardware prototype was designed by us remotely using CAD modelling software and then a commissioned build was undertaken by the technicians. This build was completed shortly before the second demo. The case is built currently using Lego Technic pieces, kindly built by the technicians to replicate the dimensions specifications we sent using the CAD design. 
                         The environment for out Hardware prototype consists of a pole and a pole holder that we had to design and get printed to hold the pole upright.
 
                         The Pole climber (shown below) main parts are; three gear motors (1) that power the robot up and down the pole, three bump sensors (2) in charge of detecting interaction with external factors, three infrared sensors (3) to detect the ceiling and floor,and the UV module (4) which cleans the pole surface.
-                        *Pole Climber*
                         <center>
-                          <figcaption>Flowchart for the Controller of our Webots Simulation</figcaption>
-                          <img src="images/howItWorks/pole_climber.jpg" alt="Flowchart for Controller of our Webots Simulation">
-                        </center>
+                          <figcaption>Pole Climber section of PAUL which ascends and descends the pole.</figcaption>
+                          <img src="images/howItWorks/pole_climber.png" alt="Flowchart for Controller of our Webots Simulation">
+                        </center><br>
 
-                          <b>Consumer Box</b>
+                        <br><b>Consumer Box</b><br>
                         We installed all our components nicely inside the consumer box. In this arrangement they are easily accessible which allowed us to quickly switch out faulty components during testing. The wire arm wraps up all of the mentioned components into the Consumer Box (shown below), whose main parts are; a battery pack (1) that is the power source, motor/encoder boards (2/3) which handle the motors connections, a USB Hub (4) that links the power source to a USB Power bank (7), the Phidget Board (5) that receives the sensors readings and the RaspberryPi (6) which acts as a motherboard.
-                        *Consumer Box*
                         <center>
-                          <figcaption>Flowchart for the Controller of our Webots Simulation</figcaption>
+                          <figcaption>Consumer Box used to house the control components.</figcaption>
                           <img src="images/howItWorks/consumer_box.jpg" alt="Flowchart for Controller of our Webots Simulation">
-                        </center>
-
-                          <b>Ongoing Issues</b>
+                        </center><br>
+                        <br><b>UV Light</b><br>
                         We also managed to successfully activate the LED remotely which you can see in the picture on the left and then we installed this LED inside the UV casing which you can see in the picture on the right. Note that in this picture it has been detached from the pole. In order to install the LED inside the UV casing we had to redesign the UV casing again and ask the technicians to print and install it.
-                        *UV Light images*
                         <center>
-                          <figcaption>Flowchart for the Controller of our Webots Simulation</figcaption>
+                          <figcaption>LED light used to simulate the UV light</figcaption>
                           <img src="images/howItWorks/UV_light.jpg" alt="Flowchart for Controller of our Webots Simulation">
                         </center>
-                        <br><br>
+                        <br><b>Ongoing Issues</b><br>
                         The main issues we faced and the reasons why the hardware version of PAUL is not here today are as follows.
                         The wire arm we use to connect the consumer box to the pole climber puts too much pressure on one side of PAUL. This in turn leads to the UV casing being pulled against one side of the pole and PAUL is then unable to climb. We were unable to resolve this issue in time but if given the chance to do so in the future we would look to spread out the wire arm onto the 3 sides of the case so that equal pressure is applied to all sides. 
                         <br><br>
@@ -181,6 +176,7 @@
                         We think our robot would work well with wireless charging which would remove the need for a large battery pack on the robot itself, we could place the charging pad for PAUL inside the consumer box which would keep it out of the way of passengers.
                         <br><br>
                         Another issue we repeatedly faced during testing is that the LEGO NXT motors we selected would stall on startup. Having individual motors stall at startup causes the robot to tilt to one side. This then causes the UV casing to be pulled against the pole and PAUL is then unable to climb. There are two possible solutions that we have seen to this issue: the first is to choose a new type of motor that is less prone to stalling and the second is to adjust the power on the other motors to compensate for the stalling motor. 
+                        <br><br>
                         Working remotely with robots was a challenge and we are thankful for all the support the technicians gave us during this semester without them we wouldn't even have a hardware prototype.
                         If you’d like to find out more about our Hardware Prototype then we suggest checking out our user guide.
 
