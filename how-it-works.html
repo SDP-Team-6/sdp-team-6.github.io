@@ -58,10 +58,10 @@
             <ul class="header-nav">
                 <li><a href="index.html" title="Home">Home</a></li>
                 <li><a href="system.html" title="System">System</a></li>
-                <li><a href="how-it-works.html" title="How it works">How it works*</a></li>
+                <li><a href="how-it-works.html" title="How it works">How it works</a></li>
                 <li><a href="evaluation.html" title="Evaluation">Evaluation</a></li>
                 <li><a href="budget.html" title="Services">Budget</a></li>
-                <li><a href="comments.html" title="Comments">Comments</a></li>
+                <!--<li><a href="comments.html" title="Comments">Comments</a></li> -->
                 <li class="current"><a href="team.html" title="About">Team</a></li>
                 <li><a href="blogs.html" title="Services">Blogs</a></li>
             </ul>
@@ -182,12 +182,71 @@
                         If you’d like to find out more about our Hardware Prototype then we suggest checking out our <a style="color:blue;"href="group-6-user-guide.pdf" title="User Guide">User Guide.</a>
 
                       </p>
-                    <strong>SOFTWARE – The User Interface</strong>
-                      <p>
-                        - images of interface design
-                        - explaination of functionality
-                      </p>
-
+                <h3 class = "display-1">App</h3>
+                <p>
+                    The App is the main contact point between PAUL and the user. To provide the best user experience and allow the user to exploit all functionalities of our robot,
+                    we tried to make the app as powerful, accessible and secure as possible.
+                </p>
+                <strong style="font-size:22pt;">Design</strong>
+                <p>
+                    The layout of the app consists of three fragments: Login, Control Panel and Setting.
+                </p>
+                <strong style="font-size:22pt;">Login</strong>
+                <p>
+                    The user must login successfully before controling PAUL. We use an 
+                    <a href="https://www.sqlite.org/index.html" target="_blank"><U><strong>SQLite</strong></U></a>
+                    database and store usernames with hashed passwords created using the
+                    <a href="https://werkzeug.palletsprojects.com/en/1.0.x/" target="_blank"><U><strong>Werkzeug</strong></U></a>
+                    python library using the <strong>SHA-256</strong> hashing algorithm. This allows the user to securely login
+                    to to the control panel.
+                    <br><br>
+                    <img src="images/login.png" alt="Porter’s Five Forces Analysis" width="800" height="800">
+                </p>
+                <strong style="font-size:22pt;">Control Panel</strong>
+                <p>
+                    The user will use the Control Panel page to control the
+                    deployed PAUL. The Control Panel consists of
+                    an interactive object of a train which allows the user
+                    to control PAUL interactively. It also has a feature to
+                    control all robots at once which can be used for scheduled
+                    cleaning.The Control panel has a pop-up settings
+                    page where the user can customise both PAUL-bot settings
+                    and different accessibility and aesthetic settings.
+                    <br><br>
+                    <img src="images/control.png" alt="Porter’s Five Forces Analysis" width="800" height="800">
+                </p>
+                <strong style="font-size:22pt;">Settings</strong>
+                <p>
+                    In the Settings page, the user can manipulate UV
+                    light, Auto mode, time, and speed. The accessibility
+                    section, allows the user to customise the Control
+                    Panel to their liking. This includes a mixture of essential
+                    accessibility features and aesthetics features like
+                    High-Contrast Mode, Narrator, Vibration Feedback,
+                    Light-Mode, and Magnifier.
+                    <br><br>
+                    <img src="images/setting.png" alt="Porter’s Five Forces Analysis" width="800" height="800">
+                </p>
+                <strong style="font-size:22pt;">Implementation</strong>
+                <p>
+                    The app is implemented using flask for its
+                    easy-to-use capabilities. Flask allows us to scale our project
+                    through different web services without dealing with
+                    much of its own boiler-plates. We used JavaScript for any DOM
+                    manipulation on the front-end side and used Python for
+                    running any back-end scripts.
+                
+                </p>
+                <strong style="font-size:22pt;">Connection between PAUL and App</strong>
+                <p>
+                    We wrote a script to establish an ssh connection between PAUL and the app. Everytime the user saves changes in the settings page, all changes are passed to the flask app from the html form.
+                    The flask app then runs the controller script which first establishes an ssh connection with the Raspberry Pi of PAUL and then runs other scripts that change the state of PAUL.
+                    <br><br>
+                    For example, when the user selects <strong>"Auto-mode - ON"</strong> in settings, the controller script on the app would make PAUL move on the pole for the duration selected by the user in settings.
+                    <br>
+                    When the user selects <strong>"UV-mode - ON"</strong>, it would turn on the UV light on PAUL to start the santisation of the pole.
+                    
+                </p>
                 <br><br>
                 <h3 class = "display-1">Methods</h3>
                     <p> Initially, we looked to simulate a simple robot that's able to navigate poles.
@@ -268,6 +327,28 @@
         </div>
 
     </section> <!-- end page content -->
+    
+     <!-- footer
+    ================================================== -->
+    <footer class="s-footer">
+
+        <div class="row footer-top">
+
+        </div> <!-- end footer-top -->
+
+        <div class="row footer-bottom">
+            <div class="column ss-copyright">
+                <span>© 2021 PAUL (Group 6)</span>
+            </div>
+        </div> <!-- footer-bottom -->
+
+        <div class="ss-go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0l8 9h-6v15h-4v-15h-6z"/></svg>
+            </a>
+        </div> <!-- ss-go-top -->
+
+    </footer> <!-- end s-footer -->
 
 
     <!-- Java Script
