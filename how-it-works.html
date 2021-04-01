@@ -98,7 +98,7 @@
                           The robot will move up and down the pole, while its enclosed UV module emits a band of low wavelength ultraviolet radiation (UVC),
                           deactivating viruses brought by frequent touches.
                     </p>
-                <h3 class = "display-1">SIMULATION</h3>
+                <h3 class = "display-1">PAUL IN SIMULATION</h3>
                     <p>
                       Due to restricted access to campus facilities and social distancing during the pandemic, we developed the prototype of PAUL primarily as a Webots Simulation.
                       <br>
@@ -106,10 +106,14 @@
                       There are two distance sensors, one on the top and one on the bottom side, for detecting proximity of the simulated floor and ceiling, respectively.
                       The UV module is attached at the top of the robot as a circular ring closely surrounding the pole. An LED is attached on the inside of the ring, representing UV emission.
                       The top and bottom sides of the UV module were intentionally left open for viewers to directly see when the LED is turned on in the simulation –– the UV module should otherwise be completed sealed in manufacturing the physical robot.
-                      <br><b>Figure 1 ... making the figure of PAUL with components labelled</b>
+                      <br>
+                          <figcaption>Figure 1. Labelled Components of PAUL in Webots Simulation</figcaption>
+                          <img src="images/howItWorks/components_webots.jpg" alt="Components of PAUL" style="max-height:80vh;">
                       <br><br>
                       Figure 2 shows PAUL in a simplified simulation of the environment on a typical public transport vehicle.
-                      <br><b>Figure 2 ... screenshot goes here</b>
+                      <br>
+                          <figcaption>Figure 2. Simulated PAUL with Simplified Train Environment</figcaption>
+                          <img src="images/howItWorks/train_environment.jpg" alt="Simplified Train Environment Webots" style="max-height:80vh;">
                       <br><br>
                       The following Flowchart illustrates the controller process of the simulated robot conducting UV cleaning.
                       <center>
@@ -118,14 +122,20 @@
                       </center>
                       <br>
                       PAUL is placed initially at the bottom of the cylindrical pole, 10cm away from the floor, with the UV LED turned off.
-                      <br><b>Figure 3 ... a screenshot of PAUL at the start state</b>
+                      <br>
+                          <figcaption>Figure 3. PAUL in its Initial State</figcaption>
+                          <img src="images/howItWorks/initial_state.jpg" alt="PAUL in its Initial State" style="max-height:80vh;">
                       <br><br>
                       When the simulation begins, motors connected to the three wheels are started simultaneously. Meanwhile, LED is turned on for disinfection, which is displayed as a bright purple light in Webots.
                       Currently, we set PAUL to travel at a speed of 0.22 rad/s to achieve comprehensive disinfection of Covid-19, based on our research. (The speed in the video is increased for the purpose of compact demonstration.)
                       <br><b>Figure 4 ... gif of PAUL going up with LED on</b>
+                          <figcaption>Figure 4. PAUL goes up and cleans the pole</figcaption>
+                          <img src="images/howItWorks/cleaning_state.jpg" alt="PAUL in Normal Cleaning State" style="max-height:80vh;">
                       <br><br>
                       The distance sensors are continuously checked and signify for a change of moving direction if the robot is 10cm within the ceiling/floor.
-                      <br><b>Figure 5 ... a screenshot of ds detecting ceiling</b>
+                      <br>
+                          <figcaption>Figure 5. Top distance sensor detects ceiling and PAUL changes direction</figcaption>
+                          <img src="images/howItWorks/change_direction.gif" alt="PAUL Changes Direction" style="max-height:80vh;">
                       <br><br>
                       The robot would stop and rest for a preset time when one clean cycle has finished. Each clean cycle is composed of a set number of tours –
                       travelling from the bottom of the pole up to the top, then back to bottom is considered as one complete tour.
@@ -133,8 +143,7 @@
 
                     </p>
                 <br>
-                <h3 class = "display-1">THE PHYSICAL ROBOT</h3>
-                    <strong>HARDWARE</strong>
+                <h3 class = "display-1">HARDWARE – THE PHYSICAL ROBOT</h3>
                       <p>
                         We hoped to be able to present a fully working hardware version of PAUL at the industry day however we ran into some hardware issues close to the end of development. In the video below we will take you through the work we have put into PAUL and the hardware issues we faced.
                         <div class="video-container">
