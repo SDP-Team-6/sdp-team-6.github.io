@@ -182,12 +182,66 @@
                         If you’d like to find out more about our Hardware Prototype then we suggest checking out our user guide.
 
                       </p>
-                    <strong>SOFTWARE – The User Interface</strong>
-                      <p>
-                        - images of interface design
-                        - explaination of functionality
-                      </p>
-
+                <h3 class = "display-1">App</h3>
+                <p>
+                    The App is the main contact point between PAUL and the user. To provide the best user experience and allow the user to exploit all functionalities of our robot,
+                    we tried to make the app as powerful, accessible and secure as possible.
+                </p>
+                <strong style="font-size:22pt;">Design</strong>
+                <p>
+                    The layout of the app consists of three fragments: Login, Control Panel and Setting.
+                </p>
+                <strong style="font-size:22pt;">Login</strong>
+                <p>
+                    The user must login successfully before controling PAUL. We use an 
+                    <a href="https://www.sqlite.org/index.html" target="_blank"><U>SQLite</U></a>
+                    database and store usernames with hashed passwords created using the
+                    <a href="https://werkzeug.palletsprojects.com/en/1.0.x/" target="_blank"><U>Werkzeug</U></a>
+                    python library. This allows us the user to securely login
+                    to the sign in to the control panel.
+                    <br><br>
+                    <img src="images/login.png" alt="Porter’s Five Forces Analysis" width="800" height="800">
+                </p>
+                <strong style="font-size:22pt;">Control Panel</strong>
+                <p>
+                    The user will use the Control Panel page to control the
+                    deployed PAUL. The Control Panel consists of
+                    an interactive object of a train which allows the user
+                    to control PAUL interactively. It also has a feature to
+                    control all robots at once which can be used for scheduled
+                    cleaning.The Control panel has a pop-up settings
+                    page where the user can customise both PAUL-bot settings
+                    and different accessibility and aesthetic settings.
+                    <br><br>
+                    <img src="images/control.png" alt="Porter’s Five Forces Analysis" width="800" height="800">
+                </p>
+                <strong style="font-size:22pt;">Setting</strong>
+                <p>
+                    In the Setting page, the user can manipulate UV
+                    light, Auto mode, time, and speed. The accessibility
+                    section, allows the user to customise the Control
+                    Panel to their liking. This includes a mixture of essential
+                    accessibility features and aesthetics features like
+                    High-Contrast Mode, Narrator, Vibration Feedback,
+                    Light-Mode, and Magnifier.
+                    <br><br>
+                    <img src="images/setting.png" alt="Porter’s Five Forces Analysis" width="800" height="800">
+                </p>
+                <strong style="font-size:22pt;">Implementation</strong>
+                <p>
+                    The app is implemented using flask for its
+                    easy-to-use capabilities. Flask allows us to scale our project
+                    through different web services without dealing with
+                    much of its own boiler-plates. We used JavaScript for any DOM
+                    manipulation on the front-end side and used Python for
+                    running any back-end scripts.
+                
+                </p>
+                <strong style="font-size:22pt;">Connection between PAUL and App</strong>
+                <p>
+                    We use ssh to connect PAUL and App. Everytime the user saves changes in the setting page, then all changes will be passed to the flask python file from html file.
+                    Then the flask python file calls ssh to connect Raspberry Pi and changes PAUL's state.
+                </p>
                 <br><br>
                 <h3 class = "display-1">Methods</h3>
                     <p> Initially, we looked to simulate a simple robot that's able to navigate poles.
