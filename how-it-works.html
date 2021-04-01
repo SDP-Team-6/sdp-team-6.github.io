@@ -97,6 +97,11 @@
                         <strong>PAUL</strong> is the only product in the current UV disinfection robot market which achieves efficient automated disinfection of poles on public transport.
                           The robot will move up and down the pole, while its enclosed UV module emits a band of low wavelength ultraviolet radiation (UVC),
                           deactivating viruses brought by frequent touches.
+                        <br>
+                          Our project consists of both hardware and software development of PAUL. 
+                          A simulation has been developed and well-tested to demonstrate the operation of PAUL during train journeys. 
+                          A hardware implementation is also developed. It followed the progress of the simulated version as a guide. 
+                          A web-based UI would be used to control the physical robot which will allow the user to activate and supervise the cleaning process of PAUL.
                     </p>
                 <h3 class = "display-1">PAUL IN SIMULATION</h3>
                     <p>
@@ -107,13 +112,17 @@
                       The UV module is attached at the top of the robot as a circular ring closely surrounding the pole. An LED is attached to the inside of the ring, representing UV emission.
                       The top and bottom sides of the UV module were intentionally left open for viewers to directly see when the LED is turned on in the simulation –– the UV module should otherwise be completed sealed in manufacturing the physical robot.
                       <br>
+                        <center>
                           <figcaption>Figure 1. Labelled Components of PAUL in Webots Simulation</figcaption>
                           <img src="images/howItWorks/components_webots.jpg" alt="Components of PAUL" style="max-height:80vh;">
+                        </center>
                       <br><br>
                       Figure 2 shows PAUL in a simplified simulation of the environment on a typical public transport vehicle.
                       <br>
+                        <center>
                           <figcaption>Figure 2. Simulated PAUL with Simplified Train Environment</figcaption>
                           <img src="images/howItWorks/train_environment.jpg" alt="Simplified Train Environment Webots" style="max-height:80vh;">
+                        </center>
                       <br><br>
                       The following Flowchart illustrates the controller process of the simulated robot conducting UV cleaning.
                       <center>
@@ -123,31 +132,42 @@
                       <br>
                       PAUL is placed initially at the bottom of the cylindrical pole, 10cm away from the floor, with the UV LED turned off.
                       <br>
+                        <center>
                           <figcaption>Figure 3. PAUL in its Initial State</figcaption>
                           <img src="images/howItWorks/initial_state.jpg" alt="PAUL in its Initial State" style="max-height:80vh;">
+                        </center>
                       <br><br>
                       When the simulation begins, motors connected to the three wheels are started simultaneously. Meanwhile, LED is turned on for disinfection, which is displayed as a bright purple light in Webots.
                       Currently, we set PAUL to travel at a speed of 0.22 rad/s to achieve comprehensive disinfection of Covid-19, based on our research. (The speed in the video is increased for the purpose of compact demonstration.)
-                      <br><b>Figure 4 ... gif of PAUL going up with LED on</b>
+                      <br>
+                        <center>
                           <figcaption>Figure 4. PAUL goes up and cleans the pole</figcaption>
-                          <img src="images/howItWorks/cleaning_state.jpg" alt="PAUL in Normal Cleaning State" style="max-height:80vh;">
+                          <img src="images/howItWorks/going_up.gif" alt="PAUL in Normal Cleaning State" style="max-height:80vh;">
+                        </center>
                       <br><br>
                       The distance sensors are continuously checked and signal for a change of moving direction if the robot is 10cm within the ceiling/floor.
                       <br>
+                        <center>
                           <figcaption>Figure 5. Top distance sensor detects ceiling and PAUL changes direction</figcaption>
                           <img src="images/howItWorks/change_direction.gif" alt="PAUL Changes Direction" style="max-height:80vh;">
+                        </center>
                       <br><br>
                       The robot would stop and rest for a preset time when one clean cycle has finished. Each clean cycle is composed of a set number of tours –
                       travelling from the bottom of the pole up to the top, then back to bottom is considered as one complete tour.
                       In the simulation, PAUL will clean the pole continuously if there is no interruption.
-
+                      <br><br>
+                      <strong>The Figure below shows the evolution of our Webots Simulation of PAUL:</strong>
+                        <center>
+                          <img src="images/howItWorks/simulation_development.jpg" alt="Development of Simulation" style="max-width:80vh;">
+                          <figcaption>Figure 6. Development of the Simulated Prototype</figcaption>
+                        </center>
                     </p>
                 <br>
                 <h3 class = "display-1">HARDWARE – THE PHYSICAL ROBOT</h3>
                       <p>
                         We hoped to be able to present a fully working hardware version of PAUL at the industry day however we ran into some hardware issues close to the end of development. In the video below we will take you through the work we have put into PAUL and the hardware issues we faced.
                         <div class="video-container">
-                            <iframe width="560" height="315" src="https://youtu.be/mhUGkjCDsto" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/mhUGkjCDsto" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <br><b>Layout</b><br>
                         The Hardware system consists of 3 main parts; the consumer’s box (1), the wire arm (2) and the pole climber’s casing (3).
@@ -188,7 +208,7 @@
                         Another issue we repeatedly faced during testing is that the LEGO NXT motors we selected would stall on startup. Having individual motors stall at startup causes the robot to tilt to one side. This then causes the UV casing to be pulled against the pole and PAUL is then unable to climb. There are two possible solutions that we have seen to this issue: the first is to choose a new type of motor that is less prone to stalling and the second is to adjust the power on the other motors to compensate for the stalling motor. 
                         <br><br>
                         Working remotely with robots was a challenge and we are thankful for all the support the technicians gave us during this semester without them we wouldn't even have a hardware prototype.
-                        If you’d like to find out more about our Hardware Prototype then we suggest checking out our <a style="color:blue;"href="group-6-user-guide.pdf" title="User Guide">User Guide.</a>
+                        If you’d like to find out more about our Hardware Prototype then we suggest checking out our <a style="color:blue;"href="reports/user-guide.pdf" title="User Guide">User Guide.</a>
 
                       </p>
                 <h3 class = "display-1">App</h3>
@@ -274,10 +294,10 @@
                       </p>-->
                 <h3 class = "display-1">Demo Reports</h3>
                       <p> For more information you can see what we presented at each of the 4 demonstrations we did this semester: <br>
-                        <a style="color:blue;"href="group-6-demo1-report.pdf" title="Demo 1 Report">Demo 1 Report.</a><br>
-                        <a style="color:blue;"href="group-6-demo2-report.pdf" title="Demo 2 Report">Demo 2 Report.</a><br>
-                        <a style="color:blue;"href="group-6-demo3-report.pdf" title="Demo 3 Report">Demo 3 Report.</a><br>
-                        <a style="color:blue;"href="group-6-demo4-report.pdf" title="Demo 4 Report">Demo 4 Report.</a><br>
+                        <a style="color:blue;"href="reports/demo1.pdf" title="Demo 1 Report">Demo 1 Report</a><br>
+                        <a style="color:blue;"href="reports/demo2.pdf" title="Demo 2 Report">Demo 2 Report</a><br>
+                        <a style="color:blue;"href="reports/demo3.pdf" title="Demo 3 Report">Demo 3 Report</a><br>
+                        <a style="color:blue;"href="reports/demo4.pdf" title="Demo 4 Report">Demo 4 Report</a><br>
                       </p>
                 <br><br>
 
