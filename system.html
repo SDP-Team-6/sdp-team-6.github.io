@@ -100,25 +100,25 @@
                     <p>
                         <strong>PAUL</strong> (Pole Automaton Using Ultraviolet Light) is a pole climbing robot designed to disinfect poles in public transport via a band of low wavelength ultraviolet radiation (UVC).
                         <br>
-                        PAUL offers support for professional cleaners and workers on public transport during the on-going pandemic, thus having service providers in the public transportation sector as its target market.
+                        PAUL is designed to work alongisde professional cleaners to aid in cleaning public transport. We view this as especially relevant as during the pandemic, but our modular design facilitates other use cases as well.
                         <br><br>
                         <strong style="font-size:18pt;">Use Cases</strong><br>
-                        <strong>1. Disinfection against COVID-19</strong><br>
-                        PAUL is designed primarily for sanitising poles on public transport. The aim is to achieve frequent disinfection as poles are highly touched surfaces.
-                        The robot grips onto a single pole with its wheels. The UI controls its upward and downward movements, as well as the emission of UV light.
-                        During cleaning, the robot moves at a slow, constant speed, and the attached UV module containing UV-C LEDs emit short wavelength ultraviolet light for virus deactivation.
+                        <strong>1. Disinfection</strong><br>
+                        PAUL is designed primarily for sanitising poles on public transport. The aim is to frequently disinfect poles as they are highly touched surfaces.
+                        After being attatched to the pole. The UI offers control over speed, emission of UV light and the duration of cleaning cycles.
+                        During cleaning, the robot moves at a slow, constant speed, and the attached UV module emits short wavelength ultraviolet light for virus deactivation.
                         <br><br>
-                        <strong>2. General Purpose Pole Climber (potential use case after the pandemic)</strong><br>
-                        When the UV module is removed, PAUL becomes an automated pole-climber. After the pandemic is over, other modules can replace the UV module to achieve other functionality. (see Future Development section below)
+                        <strong>2. General Purpose Pole Climber </strong><br>
+                        When the UV module is removed, PAUL becomes an automated pole-climber. Allowing other modules that can replace the UV module to achieve other functionality, or work alongside it. (see Future Development section below)
                     </p>
 
 
                 <h3 class = "display-1">Functionality</h3>
                 <strong style="font-size:22pt;">Features</strong><br>
                     <p>
-                        <strong>1. Automatic Moving and Disinfecting</strong>
+                        <strong>1. Automatic Movement and Disinfection</strong>
                         <br>
-                        The switch of the UV and motors is controlled by the app. After PAUL is activated by the app, it can move up and down automatically. There are distance sensors installed on PAUL. If one of them detects an obstacle, then PAUL will turn around.
+                        PAUL can move up and down automatically after setup using our web app. The onboard distance sensors detect potential collisions and turn PAUL around.
 
                         <br><br>
                         <strong>2. Authentication</strong>
@@ -126,44 +126,45 @@
                         Only the authenticated user can login and control PAUL.
                         <br><br>
                         <img src="images/login.png" alt="Porter’s Five Forces Analysis" width="800" height="800"><br>
-                        <strong>3. Multiple Settings</strong>
+                        <strong>3. Adjustability</strong>
                         <br>
-                        The app contains accessibility. The user can toggle on/off High Contrast, Narrator, Magnifier, Light Mode and Vibrations.
-                        For the setting of PAUL, the user can toggle on/off UV mode, Auto mode, and set work hours as well speed of PAUL.
+                        The user can toggle UV mode, Auto mode, and set work hours as well speed of PAUL. 
+                        These features are supported by a range of accessibility features. The user can toggle on/off High Contrast, Narrator, Magnifier, Light Mode and Vibrations.
+                        
                         <br><br>
                         <img src="images/setting.png" alt="Porter’s Five Forces Analysis" width="800" height="800"><br>
-                        <strong>4. Set multiple PAUL in one time</strong>
+                        <strong>4. Centralised Management</strong>
                         <br>
-                        If there are multiple PAUL connecting to the app. The user can select one or more of them to set their work.
+                        Users can control multiple PAUL robots from their account on our web app. Allow the user to adjust many robots at once.
                         <br><br>
                         <img src="images/control.png" alt="Porter’s Five Forces Analysis" width="800" height="800"><br>
-
+    
+                        
                         <br>
                         <strong style="font-size:22pt;">Why PAUL?</strong><br>
-                        <strong>1. Efficient Disinfection</strong>
+                        <strong>1. Easy to Use</strong>
                         <br>
-                        Compared to whole-room UV disinfection, PAUL is more specialised, which easily allows more frequent cleaning of the highly touched poles.
-                        This significantly improves the outcome of disinfection by specifically targeting one common way of virus transmission, while disinfecting at a higher rate.
+                        Users can control PAUL easily by a simple, intuative web app. Connecting to PAUL via wifi with the help of the onboard Raspberry Pi.
                         <br><br>
-                        <strong>2. Effective Design</strong>
+                        <strong>2. Efficient Disinfection</strong>
+                        <br>
+                        Whole-room disinfection experiences a number of issues, PAUL's design overcomes these by focusing on a specific area which is likely to result in virus transmission.
+                        Allowing for more effective and more frequent cleaning of highly touched poles.
+                        <br><br>
+                        <strong>3. Effective Design</strong>
                         <br>
                         The design of PAUL overcomes traditional problems with UV cleaning. It limits the cleaning area, emits light at a close distance,
-                        and maintains a constant light intensity –– all allowing stable and highly focused UV irradiation towards the pole.
+                        and maintains a constant light intensity –– all allowing stable and highly focused UV irradiation towards the pole. Unlike other competitors
                         <br><br>
-                        <strong>3. Safety</strong>
+                        <strong>4. Safety</strong>
                         <br>
-                        Our primary competitor in the market would be UVD Robots, who themselves produce large robots which use UVC technology to clean entire rooms at a time.
-                        However, our competitor is only able to deploy their robots when no humans are present due to
-                        <a href = "https://www.cancer.org/cancer/cancer-causes/radiation-exposure/uv-radiation.html"> <U>the damaging nature of UVC radiation.</U> </a>
-                        In this case, PAUL encloses the UV emitter by a safety case.
-                        <br><br>
-                        <strong>4. Easy to Use</strong>
-                        <br>
-                        Users can control PAUL easily by a simple app. It connects PAUL via wifi with the help of a Raspberry Pi.
+                        PAUL only operates when the train reaches the end of a journey and there are now humans present. Due to <a href = "https://www.cancer.org/cancer/cancer-causes/radiation-exposure/uv-radiation.html"> <U>the damaging nature of UVC radiation.</U> </a>
+                        Our UV enclosure also provides an added layer of protection.
                         <br><br>
                         <strong>5. Cheaper</strong>
                         <br>
-                        In using an LED strip and cleaning a small surface area at a time, PAUL is much cheaper than other disinfection robots that use big UV lamps.
+                        PAUL currently only costs us £381 to produce and we expect to be able to reduce this further. Our main competitors Hipac and UVD Robotics produce robots which
+                        cost £36k and £58k respectively. 
                     </p>
                 <div class="video-container">
                 <video width="320" height="240" controls="controls">
@@ -176,14 +177,14 @@
                 <h3 class = "display-1">Market Research</h3>
                     <p class = "market_research">
                         <strong style="font-size:18pt;">Background</strong><br>
-                        During the ongoing pandemic, the risk of infection for taking public transportation is high due to the transmission nature of coronavirus.
-                        One of the primary means of virus transmission is through high-touch surfaces on which viruses can last a long period of time.
-                        Means to repetitively disinfect such surfaces during the operation of buses and trains is lacking in the market.
-                        We therefore propose an automatic UV cleaning robot for poles – where passengers may often touch and get viruses inattentively –
-                        as a supplement to the various general disinfection products that currently exist.
+                        During the pandemic, the risk of infection on public transportation is high.
+                        One of the primary means of virus transmission is through high-touch surfaces on which viruses can survive for a long period of time.
+                        There does not currently exist any product on the market to repetitively disinfect such surfaces during the operation of buses and trains.
+                        We therefore propose an automatic UV cleaning robot for poles to a supplement existing cleaning staff.
                         <br>
                         <div style="height:90vh; margin-bottom:0;">
                           <strong>State of the Industry: Porter’s Five Forces Analysis</strong>
+                            This analysis focuses on our position in the market, we will discuss how we plan to combat the risks which we forsee launching this product.
                           <div style="width:48vw; position:absolute; left:12vw;">
                               <img src="images/ms-porters-analysis.jpg" alt="Porter’s Five Forces Analysis">
                           </div>
@@ -191,7 +192,7 @@
                               <ul>
                                   <li><b>Supplier Power Solutions</b></li>
                                   - Purchasing in bulk to improve negotiating power<br>
-                                  - Using multiple suppliers to mitigate issues encountered with one<br>
+                                  - Using multiple suppliers to mitigate issues encountered with individual companies<br>
                                   <li><b>Substitution Solutions</b></li>
                                   - Focus on research which supports the use of UV cleaners as a support for paid professionals on high touch areas
                                   <li><b>Conclusion</b></li>
@@ -201,13 +202,14 @@
                         </div>
                         <div style="height:80vh; margin-top:10px;">
                           <strong>Where We Stand: SWOT Analysis of PAUL</strong>
+                            This analysis focuses on the viability of PAUL as a product.
                           <div style="width:55vw; position:absolute; left:12vw;">
                               <img src="images/ms-swot-analysis.jpg" alt="SWOT Analysis">
                           </div>
                           <div style="width:20vw; height:auto; position:absolute; right:11vw;">
-                              There are many opportunities to continue improving PAUL’s functionality.
-                              We believe the benefits here far outlay the weaknesses and to date have mitigated the
-                              risk of human interaction and ethical / health concerns by operating only on trains which are not in-transit.
+                              Ultimately, we are very happy that we have a compelling product, able to deliver on the need for more consistent cleaning solution on public transport.
+                              There are many opportunities to continue improving PAUL’s functionality. Finally, we have taken steps to minimise the
+                              ethical / health concerns by operating only on trains which are not in-transit and believe we could overcome supplier concerns by indentifying multiple suppliers and entering negotiations early.
                           </div>
                         </div>
                         <br>
@@ -229,7 +231,7 @@
                               (<a href="https://www.lothianbuses.com/news/2021/01/coronavirus-covid-19/" title="Lothian on Covid-19">Lothian</a>).</li>
                             <li>We have identified some potential competitors. At present, however, most UV disinfection robots are for whole-room treatment, such as the <a href="https://www.hipac.com.au/shop/uvc-disinfection-robot/index" title="Hipac"> Hipac disinfection robot </a>,
                               <a href="https://www.uvd-robots.com/" title="UVD">UVD robots</a>, and <a href="https://www.dailymail.co.uk/sciencetech/article-8159921/Chinese-company-unveils-40-000-hospital-robot-disinfectants-against-coronavirus-pathogens.html" title="Daily Mail"> the one developed by Keenon Robotics</a>.
-                              These large robots, as well as small hand-held UV disinfection devices such as the <a href="https://www.pro-lab.co.uk/product/bio%e2%80%a2wand-uv-sanitiser/" title="Bio Wand">Bio-Wand sanitiser</a>, aim for <b>different purposes from PAUL</b>.</li>
+                              These large robots, as well as small hand-held UV disinfection devices such as the <a href="https://www.pro-lab.co.uk/product/bio%e2%80%a2wand-uv-sanitiser/" title="Bio Wand">Bio-Wand sanitiser</a>, which have <b>different purposes than PAUL</b>.</li>
                             <li>While the larger UV disinfection robots mentioned above cost around <b>£40,000</b>, PAUL is competitive not only for that it's the only robot on the market which will provide its functionality, but also for a much cheaper price.</li>
                             <br><b>UV Disinfection</b>
                             <li>Current studies generally acknowledges the success of UV on reducing surface contamination.
@@ -262,7 +264,7 @@
                           <li>We are in a good position for horizontal scaling, having already prepared authentication scripts and a web UI which supports accounts with many robots.</li>
                           <li>Currently, each pole will employ their own PAUL to achieve disinfection. For now, PAUL will only operate when there are no humans in the area, at the end of a given route.
                             In future we leave open the possibility of expanding PAUL’s functionality to allow for operation during transit, improving commercial viability but including many ethical and design constraints.</li>
-                          <li>Start to develop relationships with procurement officers at train companies operating in Scotland e.g. Scotrail, Crosscoun-try, etc.</li>
+                          <li>Start to develop relationships with procurement officers at train companies operating in Scotland e.g. Scotrail, Crosscountry, etc.</li>
                           <li>Start negotiating with suppliers in order to minimise our dependency on any given supplier and improve our negotiating position when buying in bulk whilst minimising production downtime.</li>
                         </ul>
                         <br><br>
@@ -271,9 +273,9 @@
 
                 <h3 class = "display-1">Future Development</h3>
                     <p style="margin-bottom:0;">
-                        <strong>1. Remould after pandemic</strong>
+                        <strong>1. After the pandemic</strong>
                         <br>
-                        After the pandemic is over, PAUL can be remoulded for other use cases by simply replacing the UV module with other modules.
+                        After the pandemic is over, PAUL can be adapated for other use cases by simply replacing the UV module with other modules.
                         For example, it can be equipped with a camera system to inspect street poles for damage (such as power cables on top of the pole).
                         This will allow workers to inspect poles safely and only have to work high-up when damage is detected by the robot.
                         Hence, poles can be inspected quicker and more frequently as workers can easily deploy the robot up the pole.
