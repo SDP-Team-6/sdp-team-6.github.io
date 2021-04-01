@@ -197,7 +197,7 @@
                     <a href="https://www.sqlite.org/index.html" target="_blank"><U>SQLite</U></a>
                     database and store usernames with hashed passwords created using the
                     <a href="https://werkzeug.palletsprojects.com/en/1.0.x/" target="_blank"><U>Werkzeug</U></a>
-                    python library. This allows us the user to securely login
+                    python library using the <strong>SHA-256</strong> hashing algorithm. This allows us the user to securely login
                     to the sign in to the control panel.
                     <br><br>
                     <img src="images/login.png" alt="Porter’s Five Forces Analysis" width="800" height="800">
@@ -215,9 +215,9 @@
                     <br><br>
                     <img src="images/control.png" alt="Porter’s Five Forces Analysis" width="800" height="800">
                 </p>
-                <strong style="font-size:22pt;">Setting</strong>
+                <strong style="font-size:22pt;">Settings</strong>
                 <p>
-                    In the Setting page, the user can manipulate UV
+                    In the Settings page, the user can manipulate UV
                     light, Auto mode, time, and speed. The accessibility
                     section, allows the user to customise the Control
                     Panel to their liking. This includes a mixture of essential
@@ -239,8 +239,13 @@
                 </p>
                 <strong style="font-size:22pt;">Connection between PAUL and App</strong>
                 <p>
-                    We use ssh to connect PAUL and App. Everytime the user saves changes in the setting page, then all changes will be passed to the flask python file from html file.
-                    Then the flask python file calls ssh to connect Raspberry Pi and changes PAUL's state.
+                    We wrote a script to establish an ssh connection between PAUL and the app. Everytime the user saves changes in the settings page, all changes are passed to the flask app from the html form.
+                    The flask app then runs the controller script which first establishes an ssh connection with the Raspberry Pi of PAUL and then runs other scripts that change the state of PAUL.
+                    <br><br>
+                    For example, when the user selects <strong>"Auto-mode - ON"</strong> in settings, the controller script on the app would make PAUL move on the pole for the duration selected by the user in settings.
+                    <br>
+                    When the user selects <strong>"UV-mode - ON"</strong>, it would turn on the UV light on PAUL to start the santisation of the pole.
+                    
                 </p>
                 <br><br>
                 <h3 class = "display-1">Methods</h3>
